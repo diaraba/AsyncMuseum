@@ -5,6 +5,9 @@ import lombok.*;
 
 import java.util.List;
 
+import com.async.asyncMuseum.dto.CollectionMuseeDto;
+import com.async.asyncMuseum.util.MyUtil;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -14,6 +17,7 @@ import java.util.List;
 @Table(name = "collection_musee")
 public class CollectionMusee {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nom;
     private String description;
@@ -21,4 +25,8 @@ public class CollectionMusee {
     private Musee musee;
     @OneToMany(mappedBy = "collectionMusee")
     private List<ObjetMusee> objets;
+
+    public CollectionMuseeDto toDto() {
+        return MyUtil.convert(this, new CollectionMuseeDto());
+    }
 }

@@ -9,14 +9,13 @@ import lombok.*;
 @Getter
 @Setter
 @ToString
-public class ObjetMuseeDto {
-    private Long id;
+public class ObjetMuseeCreateDto {
     private String nom;
     private String description;
     private String typeObjet;
     private String provenance;
     private String date_decouverte;
-    private CollectionMuseeDto collectionMusee;
+    private Long idCollectionMusee;
     public ObjetMusee toModel(){
         return MyUtil.convert(this,new ObjetMusee());
     }

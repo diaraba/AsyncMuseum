@@ -3,6 +3,7 @@ package com.async.asyncMuseum.dto;
 import com.async.asyncMuseum.Enum.Jour;
 import com.async.asyncMuseum.model.Horaire;
 import com.async.asyncMuseum.util.MyUtil;
+
 import lombok.*;
 
 @AllArgsConstructor
@@ -10,13 +11,12 @@ import lombok.*;
 @Getter
 @Setter
 @ToString
-public class HoraireDto {
-    private Long id;
+public class HoraireCreateDto {
     private Jour jour;
     private String ouverture;
     private String fermeture;
     private String status;
-    public Horaire toModel(){
+        public Horaire toModel(){
         return MyUtil.convert(this,new Horaire());
     }
 }

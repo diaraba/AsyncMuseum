@@ -18,6 +18,7 @@ import java.util.List;
 @Table(name = "exposition")
 public class Exposition {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nom;
     private String description;

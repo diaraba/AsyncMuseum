@@ -12,14 +12,13 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
-public class MuseeDto {
-    private Long id;
+public class MuseeCreateDto {
     private String nom;
     private String description;
     private String adresse;
     private String telephone;
     private String email;
-    private List<Horaire> horaires ;
+    private List<Long> idHoraires ;
     public Musee toModel(){
         return MyUtil.convert(this,new Musee());
     }

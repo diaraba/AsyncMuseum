@@ -12,6 +12,7 @@ import lombok.*;
 @Table(name = "visiteur")
 public class Visiteur {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nom;
     private String prenom;

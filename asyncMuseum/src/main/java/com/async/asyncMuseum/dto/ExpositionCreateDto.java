@@ -13,13 +13,12 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
-public class ExpositionDto {
-    private Long id;
+public class ExpositionCreateDto {
     private String nom;
     private String description;
     private String date_debut;
     private String date_fin;
-    private MuseeDto musee;
+    private Long idMusee;
     private Long tarif;
     private TypeExposition typeExposition;
     private List<ObjetMusee> objetsMusee = new ArrayList<>();

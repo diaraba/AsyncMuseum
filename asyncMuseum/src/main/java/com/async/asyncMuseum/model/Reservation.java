@@ -12,6 +12,7 @@ import lombok.*;
 @Table(name = "reservation")
 public class Reservation {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "visiteur_id", referencedColumnName = "id")

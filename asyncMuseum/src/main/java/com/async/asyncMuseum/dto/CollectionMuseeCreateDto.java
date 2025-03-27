@@ -1,7 +1,6 @@
 package com.async.asyncMuseum.dto;
 
 import com.async.asyncMuseum.model.CollectionMusee;
-import com.async.asyncMuseum.model.Musee;
 import com.async.asyncMuseum.util.MyUtil;
 
 import lombok.*;
@@ -11,11 +10,10 @@ import lombok.*;
 @Getter
 @Setter
 @ToString
-public class CollectionMuseeDto {
-    private Long id;
+public class CollectionMuseeCreateDto {
     private String nom;
     private String description;
-    private Musee musee;
+    private Long idMusee;
 
     public CollectionMusee toModel() {
         return MyUtil.convert(this, new CollectionMusee());

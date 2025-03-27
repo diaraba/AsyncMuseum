@@ -17,6 +17,7 @@ import java.util.List;
 @Table(name = "objet_musee")
 public class ObjetMusee {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nom;
     private String description;
